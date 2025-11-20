@@ -1,6 +1,7 @@
 package com.example.heart_disease;
 
 import weka.core.Instances;
+import weka.core.converters.ArffSaver;
 import weka.core.converters.CSVLoader;
 import weka.core.converters.CSVSaver; // NEW Import
 import java.io.File;
@@ -28,6 +29,16 @@ public class DataLoader {
         saver.setFile(new File(outputPath));
         saver.writeBatch();
         System.out.println("✓ Dataset saved as CSV: " + outputPath);
+    }
+    /**
+     Save dataset to ARFF format (NEW METHOD)
+     */
+    public void saveAsARFF(Instances data, String outputPath) throws Exception {
+        ArffSaver saver = new ArffSaver();
+        saver.setInstances(data);
+        saver.setFile(new File(outputPath));
+        saver.writeBatch();
+        System.out.println("✓ Dataset saved as ARFF: " + outputPath);
     }
 
     /**

@@ -6,7 +6,7 @@ public class Preprocessing {
 
     public static void main(String[] args) {
         try {
-            System.out.println("=== STEP 1: DATA PRE-PROCESSING (CLEAN CSV OUTPUT) ===");
+            System.out.println("=== STEP 1: DATA PRE-PROCESSING (CLEAN CSV & ARFF OUTPUT) ===");
 
             // Initialize components
             DataLoader loader = new DataLoader();
@@ -33,13 +33,14 @@ public class Preprocessing {
             System.out.println("\n--- CLEANED DATA ANALYSIS ---");
             analyzer.performAnalysis(cleanedData);
 
-            // Step 6: Save the entire cleaned dataset as a single CSV file.
+            // Step 6: Save the entire cleaned dataset as both CSV and ARFF files
             loader.saveAsCSV(cleanedData, "src/main/resources/heart_disease_cleaned.csv");
+            loader.saveAsARFF(cleanedData, "src/main/resources/heart_disease_cleaned.arff");
 
-            // *** REMOVED STEPS 7 & 8: Data splitting and saving train/test files ***
-            // Commented out or removed completely to meet your request.
-
-            System.out.println("\n STEP 1 COMPLETED. Final output: heart_disease_cleaned.csv");
+            System.out.println("\n STEP 1 COMPLETED.");
+            System.out.println("Final outputs:");
+            System.out.println("  - heart_disease_cleaned.csv (For general use)");
+            System.out.println("  - heart_disease_cleaned.arff (For WEKA use)");
 
         } catch (Exception e) {
             System.err.println(" Error in Step 1: " + e.getMessage());
