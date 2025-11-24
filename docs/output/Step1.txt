@@ -1,0 +1,317 @@
+=== STEP 1: DATA PRE-PROCESSING (CLEAN CSV & ARFF OUTPUT) ===
+✓ Dataset loaded: 10000 instances, 21 attributes
+
+--- ORIGINAL DATA ANALYSIS ---
+
+ COMPREHENSIVE DATA ANALYSIS
+
+ DATASET OVERVIEW 
+Dataset Name: heart_disease
+Total Instances: 10000
+Total Attributes: 21
+Class Attribute: Not set
+
+ ATTRIBUTE DETAILS 
+1. Age [numeric]
+   Min: 18.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 49.30, StdDev: 18.19
+   Missing: 29 (0.29%)
+
+2. Gender [nominal]
+   Distinct values: 2
+     - Male: 5003 (50.03%)
+     - Female: 4978 (49.78%)
+   Missing: 19 (0.19%)
+
+3. Blood Pressure [numeric]
+   Min: 120.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 149.76, StdDev: 17.57
+   Missing: 19 (0.19%)
+
+4. Cholesterol Level [numeric]
+   Min: 150.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 225.43, StdDev: 43.58
+   Missing: 30 (0.30%)
+
+5. Exercise Habits [nominal]
+   Distinct values: 3
+     - High: 3372 (33.72%)
+     - Low: 3271 (32.71%)
+     - Medium: 3332 (33.32%)
+   Missing: 25 (0.25%)
+
+6. Smoking [nominal]
+   Distinct values: 2
+     - Yes: 5123 (51.23%)
+     - No: 4852 (48.52%)
+   Missing: 25 (0.25%)
+
+7. Family Heart Disease [nominal]
+   Distinct values: 2
+     - Yes: 4975 (49.75%)
+     - No: 5004 (50.04%)
+   Missing: 21 (0.21%)
+
+8. Diabetes [nominal]
+   Distinct values: 2
+     - No: 5018 (50.18%)
+     - Yes: 4952 (49.52%)
+   Missing: 30 (0.30%)
+
+9. BMI [numeric]
+   Min: 18.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 29.08, StdDev: 6.31
+   Missing: 22 (0.22%)
+
+10. High Blood Pressure [nominal]
+   Distinct values: 2
+     - Yes: 5022 (50.22%)
+     - No: 4952 (49.52%)
+   Missing: 26 (0.26%)
+
+11. Low HDL Cholesterol [nominal]
+   Distinct values: 2
+     - Yes: 5000 (50.00%)
+     - No: 4975 (49.75%)
+   Missing: 25 (0.25%)
+
+12. High LDL Cholesterol [nominal]
+   Distinct values: 2
+     - No: 5036 (50.36%)
+     - Yes: 4938 (49.38%)
+   Missing: 26 (0.26%)
+
+13. Alcohol Consumption [nominal]
+   Distinct values: 4
+     - High: 2426 (24.26%)
+     - Medium: 2500 (25.00%)
+     - Low: 2488 (24.88%)
+     - None: 2554 (25.54%)
+   Missing: 32 (0.32%)
+
+14. Stress Level [nominal]
+   Distinct values: 3
+     - Medium: 3387 (33.87%)
+     - High: 3271 (32.71%)
+     - Low: 3320 (33.20%)
+   Missing: 22 (0.22%)
+
+15. Sleep Hours [numeric]
+   Min: 4.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 6.99, StdDev: 1.75
+   Missing: 25 (0.25%)
+
+16. Sugar Consumption [nominal]
+   Distinct values: 3
+     - Medium: 3250 (32.50%)
+     - Low: 3390 (33.90%)
+     - High: 3330 (33.30%)
+   Missing: 30 (0.30%)
+
+17. Triglyceride Level [numeric]
+   Min: 100.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 250.73, StdDev: 87.07
+   Missing: 26 (0.26%)
+
+18. Fasting Blood Sugar [numeric]
+   Min: 80.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 120.14, StdDev: 23.58
+   Missing: 22 (0.22%)
+
+19. CRP Level [numeric]
+   Min: 0.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 7.47, StdDev: 4.34
+   Missing: 26 (0.26%)
+
+20. Homocysteine Level [numeric]
+   Min: 5.00, Max: 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.00, Mean: 12.46, StdDev: 4.32
+   Missing: 20 (0.20%)
+
+21. Heart Disease Status [nominal]
+   Distinct values: 2
+     - No: 8000 (80.00%)
+     - Yes: 2000 (20.00%)
+   Missing: 0 (0.00%)
+
+
+ MISSING VALUE REPORT 
+Age: 29 missing
+Gender: 19 missing
+Blood Pressure: 19 missing
+Cholesterol Level: 30 missing
+Exercise Habits: 25 missing
+Smoking: 25 missing
+Family Heart Disease: 21 missing
+Diabetes: 30 missing
+BMI: 22 missing
+High Blood Pressure: 26 missing
+Low HDL Cholesterol: 25 missing
+High LDL Cholesterol: 26 missing
+Alcohol Consumption: 32 missing
+Stress Level: 22 missing
+Sleep Hours: 25 missing
+Sugar Consumption: 30 missing
+Triglyceride Level: 26 missing
+Fasting Blood Sugar: 22 missing
+CRP Level: 26 missing
+Homocysteine Level: 20 missing
+Total missing values: 500
+
+ DATA QUALITY ASSESSMENT ---
+Dataset completeness: 99.76%
+Recommended: Consider feature selection based on variance analysis
+
+  DATA CLEANING PIPELINE
+ Fixing attribute names (removing quotes)...
+ Attribute names cleaned.
+ Handling 500 missing values...
+Nov 24, 2025 9:35:04 PM com.github.fommil.jni.JniLoader liberalLoad
+INFO: successfully loaded /var/folders/wk/wqg1xf3130g_tcp6099t3kjh0000gp/T/jniloader14554450099925115466netlib-native_system-osx-x86_64.jnilib
+ Missing values handled: 500 → 0
+ Encoding nominal attributes to binary features...
+ Attributes before encoding: 21
+ Attributes after encoding: 30
+ Data cleaning completed successfully.
+Final dataset: 10000 instances, 30 attributes (Now fully numerical)
+✓ Class attribute set to: Heart Disease Status=Yes
+
+--- CLEANED DATA ANALYSIS ---
+
+ COMPREHENSIVE DATA ANALYSIS
+
+ DATASET OVERVIEW 
+Dataset Name: heart_disease-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last
+Total Instances: 10000
+Total Attributes: 30
+Class Attribute: Heart Disease Status=Yes
+
+ ATTRIBUTE DETAILS 
+1. Age [numeric]
+   Min: 18.00, Max: 80.00, Mean: 49.30, StdDev: 18.17
+   Missing: 0 (0.00%)
+
+2. Gender=Female [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.50, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+3. Blood Pressure [numeric]
+   Min: 120.00, Max: 180.00, Mean: 149.76, StdDev: 17.56
+   Missing: 0 (0.00%)
+
+4. Cholesterol Level [numeric]
+   Min: 150.00, Max: 300.00, Mean: 225.43, StdDev: 43.51
+   Missing: 0 (0.00%)
+
+5. Exercise Habits=High [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.34, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+6. Exercise Habits=Low [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.33, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+7. Exercise Habits=Medium [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.33, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+8. Smoking=No [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.49, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+9. Family Heart Disease=No [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.50, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+10. Diabetes=Yes [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.50, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+11. BMI [numeric]
+   Min: 18.00, Max: 40.00, Mean: 29.08, StdDev: 6.30
+   Missing: 0 (0.00%)
+
+12. High Blood Pressure=No [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.50, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+13. Low HDL Cholesterol=No [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.50, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+14. High LDL Cholesterol=Yes [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.49, StdDev: 0.50
+   Missing: 0 (0.00%)
+
+15. Alcohol Consumption=High [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.24, StdDev: 0.43
+   Missing: 0 (0.00%)
+
+16. Alcohol Consumption=Medium [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.25, StdDev: 0.43
+   Missing: 0 (0.00%)
+
+17. Alcohol Consumption=Low [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.25, StdDev: 0.43
+   Missing: 0 (0.00%)
+
+18. Alcohol Consumption=None [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.26, StdDev: 0.44
+   Missing: 0 (0.00%)
+
+19. Stress Level=Medium [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.34, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+20. Stress Level=High [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.33, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+21. Stress Level=Low [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.33, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+22. Sleep Hours [numeric]
+   Min: 4.00, Max: 10.00, Mean: 6.99, StdDev: 1.75
+   Missing: 0 (0.00%)
+
+23. Sugar Consumption=Medium [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.33, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+24. Sugar Consumption=Low [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.34, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+25. Sugar Consumption=High [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.33, StdDev: 0.47
+   Missing: 0 (0.00%)
+
+26. Triglyceride Level [numeric]
+   Min: 100.00, Max: 400.00, Mean: 250.73, StdDev: 86.95
+   Missing: 0 (0.00%)
+
+27. Fasting Blood Sugar [numeric]
+   Min: 80.00, Max: 160.00, Mean: 120.14, StdDev: 23.56
+   Missing: 0 (0.00%)
+
+28. CRP Level [numeric]
+   Min: 0.00, Max: 15.00, Mean: 7.47, StdDev: 4.33
+   Missing: 0 (0.00%)
+
+29. Homocysteine Level [numeric]
+   Min: 5.00, Max: 20.00, Mean: 12.46, StdDev: 4.32
+   Missing: 0 (0.00%)
+
+30. Heart Disease Status=Yes [numeric]
+   Min: 0.00, Max: 1.00, Mean: 0.20, StdDev: 0.40
+   Missing: 0 (0.00%)
+
+
+ CLASS DISTRIBUTION 
+
+ MISSING VALUE REPORT 
+Total missing values: 0
+
+ DATA QUALITY ASSESSMENT ---
+Dataset completeness: 100.00%
+Recommended: Consider feature selection based on variance analysis
+✓ Dataset saved as CSV: src/main/resources/heart_disease_cleaned.csv
+✓ Dataset saved as ARFF: src/main/resources/heart_disease_cleaned.arff
+
+ STEP 1 COMPLETED.
+Final outputs:
+  - heart_disease_cleaned.csv (For general use)
+  - heart_disease_cleaned.arff (For WEKA use)
+hung@Khangs-MacBook-Pro heart_disease % 
