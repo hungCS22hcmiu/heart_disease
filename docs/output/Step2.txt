@@ -1,0 +1,1578 @@
+=== STEP 2: CLASSIFICATION ALGORITHM (J48 Decision Tree) ===
+
+✓ Dataset loaded: src/main/resources/heart_disease_cleaned.arff
+✓ Number of instances: 10000
+✓ Number of attributes: 30
+
+Class attribute: Heart Disease Status=Yes
+Class attribute type: 0
+
+=== Converting Class Attribute to Nominal ===
+✓ Class attribute converted to nominal
+✓ Class values: @attribute 'Heart Disease Status=Yes' {0,1}
+
+=== Building J48 Decision Tree Classifier ===
+✓ Classifier built successfully!
+✓ Build time: 1478 ms
+
+=== Decision Tree Model ===
+J48 pruned tree
+------------------
+
+Stress Level=Medium <= 0
+|   Gender=Female <= 0
+|   |   Triglyceride Level <= 398
+|   |   |   Stress Level=High <= 0
+|   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   Fasting Blood Sugar <= 100
+|   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   Alcohol Consumption=None <= 0: 0 (116.0/21.0)
+|   |   |   |   |   |   |   Alcohol Consumption=None > 0
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   Age <= 43: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   Age > 43
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 161: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 161: 1 (8.0)
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 0 (23.0/3.0)
+|   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0: 1 (5.0)
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 7.119555
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 272: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 272: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 7.119555: 0 (10.0)
+|   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   Fasting Blood Sugar <= 83: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   Fasting Blood Sugar > 83: 0 (12.0)
+|   |   |   |   |   Fasting Blood Sugar > 100: 0 (612.0/78.0)
+|   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   Homocysteine Level <= 18.968242
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0: 0 (47.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 49.296259
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.550541: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.550541
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 31: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 31: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 49.296259: 0 (21.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None > 0: 0 (42.0/3.0)
+|   |   |   |   |   |   |   |   |   Homocysteine Level > 18.968242
+|   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 1 (3.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 83: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 83: 0 (31.0/3.0)
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 174
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 270: 0 (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 270: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 174: 1 (3.0)
+|   |   |   |   |   |   |   Alcohol Consumption=Low > 0: 0 (69.0/8.0)
+|   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   Age <= 65: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 65: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   BMI <= 27.24082: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 27.24082
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 15.491816
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 7.61449: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 7.61449: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 15.491816: 1 (5.0)
+|   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (76.0/6.0)
+|   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 4.57374: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 4.57374
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 23: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 23: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 11.442057: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 11.442057: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 26.197305: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 26.197305: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 93: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 93: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 40: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 40: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 127: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0: 0 (12.0)
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=High > 0: 0 (45.0/7.0)
+|   |   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0: 0 (28.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.020998: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.020998
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 131
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 138: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 138: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 131: 0 (17.0)
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   Age <= 52: 0 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Age > 52
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 144: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 144
+|   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 15.736064: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 15.736064: 1 (2.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=High > 0
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 178: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 178
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 34: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 34: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0: 0 (6.0)
+|   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   |   |   CRP Level <= 8.354464: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   |   CRP Level > 8.354464
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 270: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 270: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=None > 0
+|   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 154: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 154: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 0 (6.0/1.0)
+|   |   |   |   |   |   Diabetes=Yes > 0: 0 (144.0/22.0)
+|   |   |   Stress Level=High > 0
+|   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   Cholesterol Level <= 180: 0 (38.0)
+|   |   |   |   |   |   |   |   Cholesterol Level > 180
+|   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 307: 0 (48.0/4.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 307
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 29.950856
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 62: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Age > 62: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 29.950856: 1 (5.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0: 0 (44.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   |   Age <= 25: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 25
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 9.712944: 0 (26.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 9.712944: 1 (4.0/1.0)
+|   |   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   |   Blood Pressure <= 128: 0 (18.0)
+|   |   |   |   |   |   |   |   Blood Pressure > 128
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 137
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 14.24888
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level > 14.24888: 1 (9.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 137
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None <= 0: 0 (46.0/5.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None > 0
+|   |   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 99: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 99
+|   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 161: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 161: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (4.0)
+|   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0: 0 (119.0/21.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 336: 0 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 336: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 24.457809: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 24.457809
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 131: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 131: 1 (5.0)
+|   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 7.60316: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 7.60316
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 145: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 145: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None > 0
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 67: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 67: 1 (3.0)
+|   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   CRP Level <= 2.426892: 0 (12.0)
+|   |   |   |   |   |   |   |   CRP Level > 2.426892
+|   |   |   |   |   |   |   |   |   Triglyceride Level <= 274
+|   |   |   |   |   |   |   |   |   |   Age <= 53
+|   |   |   |   |   |   |   |   |   |   |   Age <= 23: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 23
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 30.450409: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 30.450409
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   Age > 53: 0 (14.0)
+|   |   |   |   |   |   |   |   |   Triglyceride Level > 274: 1 (10.0/2.0)
+|   |   |   |   |   Exercise Habits=Low > 0: 0 (297.0/44.0)
+|   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   Sleep Hours <= 9.668536
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 0 (153.0/20.0)
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 165: 0 (106.0/14.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 165
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 8.721828
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 24.176337: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 24.176337: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 8.721828: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 169: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 169: 0 (14.0)
+|   |   |   |   |   |   |   Sleep Hours > 9.668536
+|   |   |   |   |   |   |   |   Triglyceride Level <= 253: 1 (8.0)
+|   |   |   |   |   |   |   |   Triglyceride Level > 253: 0 (7.0/1.0)
+|   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   Cholesterol Level <= 188: 0 (22.0)
+|   |   |   |   |   |   |   |   Cholesterol Level > 188
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   Age <= 33: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Age > 33: 0 (19.0/2.0)
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   Age <= 42: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Age > 42
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0: 0 (2.0)
+|   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 355: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 355: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 0 (12.0/1.0)
+|   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 283
+|   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 6.247447: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 6.247447: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 283: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=None > 0: 0 (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 292: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 292: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 36: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Age > 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.732401: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.732401: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 13.099786: 0 (37.0/4.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 13.099786: 1 (2.0)
+|   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   Cholesterol Level <= 294
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 0 (58.0/7.0)
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 33: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 33
+|   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 9.984524: 0 (26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 9.984524
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 164: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 164: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   BMI <= 32.682139: 0 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   BMI > 32.682139: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Cholesterol Level > 294
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 155: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 155: 0 (2.0)
+|   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 17.675377
+|   |   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 142: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 142: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 17.675377: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=High > 0: 0 (6.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 189: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 189
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 137: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 137
+|   |   |   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 256: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 256: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 152
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 63: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 63: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 152: 0 (8.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=High > 0
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 89: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 89
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 36.255483: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 36.255483: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (17.0/1.0)
+|   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   Cholesterol Level <= 209
+|   |   |   |   |   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 167: 0 (30.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 167
+|   |   |   |   |   |   |   |   |   |   Age <= 69: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Age > 69: 1 (2.0)
+|   |   |   |   |   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   |   |   |   |   BMI <= 21.14247: 1 (2.0)
+|   |   |   |   |   |   |   |   |   BMI > 21.14247: 0 (10.0)
+|   |   |   |   |   |   |   Cholesterol Level > 209
+|   |   |   |   |   |   |   |   Fasting Blood Sugar <= 87: 0 (7.0)
+|   |   |   |   |   |   |   |   Fasting Blood Sugar > 87
+|   |   |   |   |   |   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 34.295316: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 34.295316: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 276: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 276: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 6.161042: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 6.161042
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 134: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 134: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 91: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 91
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 233: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 233: 0 (5.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.387971: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.387971
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 245: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 245: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 0 (9.0/2.0)
+|   |   Triglyceride Level > 398: 0 (31.0)
+|   Gender=Female > 0
+|   |   Alcohol Consumption=High <= 0
+|   |   |   Sugar Consumption=High <= 0
+|   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   Fasting Blood Sugar <= 154
+|   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   Sleep Hours <= 4.414042
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 4.194198: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 4.194198
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 6.848424: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level > 6.848424
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 164: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 164: 1 (11.0)
+|   |   |   |   |   |   |   |   Sleep Hours > 4.414042
+|   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (34.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 246
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 246: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Stress Level=High <= 0: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 10.738051: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 10.738051: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 0.572253: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 0.572253: 0 (81.0/8.0)
+|   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 6.032891: 0 (39.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 6.032891
+|   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 17.427929
+|   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 12.461687
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 29: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 29: 0 (23.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 12.461687
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 49
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 152: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 152: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 49: 1 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 17.427929: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 0 (90.0/9.0)
+|   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   Age <= 34: 0 (24.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Age > 34
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 120: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 120: 0 (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 259: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 259: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 4.446102: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 4.446102
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 2.336052: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 2.336052: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 175: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 175
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 9.497279: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 9.497279: 1 (8.0)
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 4.872133: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 4.872133: 0 (28.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 42
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 27.142496: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 27.142496: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Age > 42: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 19.596378: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 19.596378: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 200: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 200: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 236: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 236: 1 (3.0)
+|   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 127: 0 (21.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 127
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 160
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 34.754107
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 133
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 9.517605: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 9.517605: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 133: 0 (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 34.754107: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 3.897909: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 3.897909: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 7.922946
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 101: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 101: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 7.922946: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 160: 0 (27.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 172: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 172
+|   |   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 277
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 216: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 216: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Stress Level=High > 0: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 277: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 216: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 216: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0: 0 (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 28.248102: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 28.248102: 1 (6.0/1.0)
+|   |   |   |   |   |   Fasting Blood Sugar > 154: 0 (48.0/2.0)
+|   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   Diabetes=Yes <= 0: 0 (93.0/13.0)
+|   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   Sleep Hours <= 4.512328: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   Sleep Hours > 4.512328: 0 (76.0/12.0)
+|   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   Homocysteine Level <= 19.222002: 0 (168.0/15.0)
+|   |   |   |   |   |   |   Homocysteine Level > 19.222002
+|   |   |   |   |   |   |   |   Stress Level=High <= 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   Stress Level=High > 0: 0 (4.0/1.0)
+|   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   Cholesterol Level <= 202: 0 (16.0)
+|   |   |   |   |   |   |   |   |   Cholesterol Level > 202
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 247: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 247
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 51: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 51: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 350
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.110986: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.110986: 0 (14.0)
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 350: 1 (2.0)
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 7.52824: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 7.52824: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   BMI <= 35.131438
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 188: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 188
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 140: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 140
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 28.037457: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 28.037457: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 35.131438: 0 (5.0)
+|   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (38.0/3.0)
+|   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   Cholesterol Level <= 155: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Cholesterol Level > 155
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 152: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 152
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 6.748593: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 6.748593: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 10.639347: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 10.639347: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 0 (23.0)
+|   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 4.969005: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 4.969005: 0 (14.0/1.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 264: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 264: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 22.852981: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 22.852981: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 30.762097: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 30.762097: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   Stress Level=High <= 0: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 8.865696
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 161: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 161: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 8.865696: 1 (3.0)
+|   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0: 0 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 8.346622: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 8.346622: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 9.074603: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 9.074603
+|   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 8.08526: 0 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 8.08526: 1 (3.0)
+|   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 0 (50.0/7.0)
+|   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   Triglyceride Level <= 199: 0 (78.0/4.0)
+|   |   |   |   |   |   Triglyceride Level > 199
+|   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   BMI <= 21.047587: 1 (2.0)
+|   |   |   |   |   |   |   |   |   BMI > 21.047587: 0 (24.0/3.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0: 0 (12.0/2.0)
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 33.080609: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 33.080609: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 293: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 293: 1 (2.0)
+|   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   CRP Level <= 11.189929
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.128912: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.128912
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 6.325613: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 6.325613
+|   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 2.857144: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 2.857144: 0 (8.0)
+|   |   |   |   |   |   |   |   |   CRP Level > 11.189929: 0 (12.0)
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0: 0 (34.0/5.0)
+|   |   |   Sugar Consumption=High > 0
+|   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 131: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 131
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 0.520941: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 0.520941
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 236: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 236: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Diabetes=Yes > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 219: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 219: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 0 (15.0)
+|   |   |   |   |   |   |   Alcohol Consumption=None > 0: 0 (40.0/5.0)
+|   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   |   |   BMI <= 34.59736
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 17.326918: 0 (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 17.326918: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   BMI > 34.59736: 0 (10.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=None > 0: 0 (15.0/1.0)
+|   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   Cholesterol Level <= 193
+|   |   |   |   |   |   |   |   |   |   BMI <= 27.89425
+|   |   |   |   |   |   |   |   |   |   |   BMI <= 23.202129: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   BMI > 23.202129: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 27.89425: 1 (9.0)
+|   |   |   |   |   |   |   |   |   Cholesterol Level > 193
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 67: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 67: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 133: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 133
+|   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 0 (3.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   Triglyceride Level <= 363
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 153: 0 (16.0)
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 153: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Triglyceride Level > 363: 1 (3.0)
+|   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 0 (68.0/3.0)
+|   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   Blood Pressure <= 159
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   Age <= 29: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Age > 29
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 152: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 152
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 5.827654: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 5.827654: 1 (10.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   BMI <= 19.838662: 1 (4.0)
+|   |   |   |   |   |   |   |   |   BMI > 19.838662: 0 (25.0/4.0)
+|   |   |   |   |   |   |   Blood Pressure > 159: 0 (25.0/1.0)
+|   |   |   |   Low HDL Cholesterol=No > 0: 0 (394.0/71.0)
+|   |   Alcohol Consumption=High > 0
+|   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   Cholesterol Level <= 172
+|   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   Age <= 54: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Age > 54: 0 (2.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 1 (3.0)
+|   |   |   |   |   |   |   Cholesterol Level > 172
+|   |   |   |   |   |   |   |   Sleep Hours <= 8.093954: 0 (42.0/3.0)
+|   |   |   |   |   |   |   |   Sleep Hours > 8.093954
+|   |   |   |   |   |   |   |   |   BMI <= 24.337899: 1 (4.0)
+|   |   |   |   |   |   |   |   |   BMI > 24.337899: 0 (15.0/1.0)
+|   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   Triglyceride Level <= 218
+|   |   |   |   |   |   |   |   |   |   BMI <= 23.70695: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 23.70695: 1 (5.0)
+|   |   |   |   |   |   |   |   |   Triglyceride Level > 218: 0 (17.0/1.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Age <= 55: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 55: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0: 1 (5.0)
+|   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   Age <= 74: 0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Age > 74: 1 (2.0)
+|   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   Stress Level=High <= 0: 0 (15.0/1.0)
+|   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   BMI <= 32.8673: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 32.8673: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 1 (2.0)
+|   |   |   |   |   High Blood Pressure=No > 0: 0 (122.0/18.0)
+|   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   Homocysteine Level <= 10.116638: 1 (4.0)
+|   |   |   |   |   |   |   |   |   Homocysteine Level > 10.116638
+|   |   |   |   |   |   |   |   |   |   Stress Level=High <= 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   |   Age <= 32: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 32: 1 (3.0)
+|   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   BMI <= 24.108054: 1 (2.0)
+|   |   |   |   |   |   |   |   |   BMI > 24.108054: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 6.491963: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 6.491963: 1 (4.0/1.0)
+|   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   Blood Pressure <= 145: 1 (3.0)
+|   |   |   |   |   |   |   |   Blood Pressure > 145: 0 (8.0/1.0)
+|   |   |   |   |   |   |   Stress Level=High > 0: 0 (13.0/2.0)
+|   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   Fasting Blood Sugar <= 142
+|   |   |   |   |   |   |   |   |   Age <= 38: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Age > 38
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 11.237955
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level > 11.237955: 1 (6.0)
+|   |   |   |   |   |   |   |   Fasting Blood Sugar > 142: 0 (6.0)
+|   |   |   |   |   |   |   Sugar Consumption=Low > 0: 0 (14.0/1.0)
+|   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   BMI <= 36.597104: 0 (23.0/1.0)
+|   |   |   |   |   |   |   BMI > 36.597104: 1 (2.0)
+|   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 8.197143
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 163: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 163: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 8.197143: 0 (5.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   BMI <= 20.902123: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   BMI > 20.902123: 0 (12.0/1.0)
+|   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   CRP Level <= 4.003068
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 7.58599: 0 (4.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 7.58599: 1 (3.0)
+|   |   |   |   |   |   |   |   CRP Level > 4.003068: 0 (16.0)
+|   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   Age <= 54
+|   |   |   |   |   |   |   |   Cholesterol Level <= 275
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 0 (15.0)
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 169: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 169: 1 (2.0)
+|   |   |   |   |   |   |   |   Cholesterol Level > 275
+|   |   |   |   |   |   |   |   |   Age <= 35: 0 (2.0)
+|   |   |   |   |   |   |   |   |   Age > 35: 1 (4.0)
+|   |   |   |   |   |   |   Age > 54: 0 (27.0)
+|   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   Age <= 44
+|   |   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   |   CRP Level <= 7.185109: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   CRP Level > 7.185109: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 127: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 127: 0 (10.0/1.0)
+|   |   |   |   |   |   |   Age > 44: 0 (31.0/2.0)
+|   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 0 (8.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 152: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 152: 1 (2.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Low > 0: 1 (3.0/1.0)
+|   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   Stress Level=High <= 0
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 267: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 267: 0 (4.0)
+|   |   |   |   |   |   |   |   |   Stress Level=High > 0
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 118
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 149: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 149: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 118: 0 (8.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 283: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 283: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0: 1 (6.0/1.0)
+|   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   Smoking=No <= 0: 0 (70.0/7.0)
+|   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   Blood Pressure <= 124: 1 (4.0/1.0)
+|   |   |   |   |   |   Blood Pressure > 124
+|   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0: 0 (15.0/1.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   CRP Level <= 5.065834: 0 (2.0)
+|   |   |   |   |   |   |   |   |   CRP Level > 5.065834: 1 (4.0)
+|   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   Triglyceride Level <= 137: 1 (2.0)
+|   |   |   |   |   |   |   |   Triglyceride Level > 137: 0 (29.0)
+Stress Level=Medium > 0
+|   Alcohol Consumption=High <= 0
+|   |   Diabetes=Yes <= 0
+|   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   Cholesterol Level <= 285
+|   |   |   |   |   |   |   |   Blood Pressure <= 170
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   BMI <= 27.664342: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   BMI > 27.664342: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 101: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 101: 0 (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 7.543119: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 7.543119
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 197: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 197
+|   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 10.25209: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 10.25209
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 220: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 220: 0 (4.0)
+|   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   |   Gender=Female <= 0: 0 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 7.883059: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 7.883059: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   Blood Pressure > 170: 0 (17.0)
+|   |   |   |   |   |   |   Cholesterol Level > 285
+|   |   |   |   |   |   |   |   Gender=Female <= 0: 1 (6.0)
+|   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   CRP Level <= 12.308396: 0 (3.0)
+|   |   |   |   |   |   |   |   |   CRP Level > 12.308396: 1 (2.0)
+|   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   Exercise Habits=Low <= 0: 0 (48.0/8.0)
+|   |   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 230
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 2.302279: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 2.302279: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 230: 0 (4.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 4.537849: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 4.537849: 0 (11.0/1.0)
+|   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (32.0/4.0)
+|   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   |   Blood Pressure <= 150: 0 (21.0)
+|   |   |   |   |   |   |   |   Blood Pressure > 150
+|   |   |   |   |   |   |   |   |   BMI <= 32.159644: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   BMI > 32.159644
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 6.247671: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 6.247671: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 1 (4.0)
+|   |   |   |   |   |   |   Gender=Female > 0: 0 (45.0/3.0)
+|   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0: 0 (29.0/1.0)
+|   |   |   |   |   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 164: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 164: 1 (2.0)
+|   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   BMI <= 32.72206: 0 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 32.72206: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 182: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 182
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 211: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 211: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 170: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 170: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 0 (2.0)
+|   |   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   |   BMI <= 22.823692
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   BMI > 22.823692: 0 (23.0/4.0)
+|   |   |   |   Alcohol Consumption=None > 0
+|   |   |   |   |   Fasting Blood Sugar <= 150: 0 (203.0/26.0)
+|   |   |   |   |   Fasting Blood Sugar > 150
+|   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   BMI <= 34.161113
+|   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (3.0)
+|   |   |   |   |   |   |   BMI > 34.161113: 0 (5.0)
+|   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   Triglyceride Level <= 188: 1 (3.0/1.0)
+|   |   |   |   |   |   |   Triglyceride Level > 188: 0 (8.0)
+|   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   Sleep Hours <= 4.356822
+|   |   |   |   |   |   Triglyceride Level <= 174: 0 (5.0)
+|   |   |   |   |   |   Triglyceride Level > 174
+|   |   |   |   |   |   |   Blood Pressure <= 156
+|   |   |   |   |   |   |   |   Cholesterol Level <= 199: 1 (4.0)
+|   |   |   |   |   |   |   |   Cholesterol Level > 199
+|   |   |   |   |   |   |   |   |   BMI <= 27.689999: 1 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   BMI > 27.689999: 0 (5.0)
+|   |   |   |   |   |   |   Blood Pressure > 156: 1 (10.0)
+|   |   |   |   |   Sleep Hours > 4.356822
+|   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 335: 0 (40.0/2.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 335
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 88: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 88: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Low > 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 9.670573: 0 (21.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 9.670573: 1 (5.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 5.178733: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 5.178733: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 261: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 261: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (14.0/1.0)
+|   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (57.0/8.0)
+|   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   CRP Level <= 12.438412: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CRP Level > 12.438412: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 96: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 96: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0: 0 (24.0/4.0)
+|   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.116267: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.116267
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 252: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 252: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 278
+|   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 272: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Triglyceride Level > 272: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 278: 0 (5.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 7.278814: 0 (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 7.278814
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 0 (5.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 0 (23.0/2.0)
+|   |   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   |   Family Heart Disease=No <= 0: 0 (43.0/5.0)
+|   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 109: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 109: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   |   |   |   Age <= 60: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 60: 1 (3.0)
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 9.787175: 0 (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 9.787175: 1 (3.0)
+|   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   Sugar Consumption=Low <= 0: 0 (149.0/25.0)
+|   |   |   |   |   Sugar Consumption=Low > 0
+|   |   |   |   |   |   Alcohol Consumption=None <= 0
+|   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   Age <= 38: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Age > 38: 0 (7.0)
+|   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   CRP Level <= 0.695076: 1 (2.0)
+|   |   |   |   |   |   |   |   |   CRP Level > 0.695076: 0 (16.0/1.0)
+|   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   Smoking=No <= 0: 0 (16.0/1.0)
+|   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 10.178843: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 10.178843: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 14.68018: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level > 14.68018: 0 (2.0)
+|   |   |   |   |   |   Alcohol Consumption=None > 0
+|   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   BMI <= 34.276067: 0 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   BMI > 34.276067: 1 (3.0)
+|   |   |   |   |   |   |   |   Smoking=No > 0: 1 (2.0)
+|   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   Fasting Blood Sugar <= 112
+|   |   |   |   |   |   |   |   |   Age <= 54: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Age > 54: 1 (3.0)
+|   |   |   |   |   |   |   |   Fasting Blood Sugar > 112: 0 (9.0)
+|   |   Diabetes=Yes > 0
+|   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   CRP Level <= 10.426232
+|   |   |   |   |   |   |   |   |   Age <= 30: 1 (4.0)
+|   |   |   |   |   |   |   |   |   Age > 30
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Age <= 33: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Age > 33: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 211: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 211: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI <= 26.02595: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   BMI > 26.02595
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Age <= 65: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Age > 65: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Low > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   CRP Level > 10.426232: 0 (20.0)
+|   |   |   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 10.70729: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 10.70729: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0: 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   Exercise Habits=Medium > 0: 0 (8.0/1.0)
+|   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   |   |   Blood Pressure <= 172
+|   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 177: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 177
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Medium <= 0: 0 (22.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 157
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours <= 7.238179: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Sleep Hours > 7.238179: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 157: 0 (4.0)
+|   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium <= 0: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   Alcohol Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 138: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 138: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   |   |   CRP Level <= 10.970315: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   CRP Level > 10.970315: 0 (2.0)
+|   |   |   |   |   |   |   |   Blood Pressure > 172: 0 (11.0)
+|   |   |   |   |   |   |   Alcohol Consumption=Low > 0: 0 (40.0/7.0)
+|   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   |   |   Age <= 71
+|   |   |   |   |   |   |   |   CRP Level <= 12.745859: 0 (102.0/13.0)
+|   |   |   |   |   |   |   |   CRP Level > 12.745859
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 150: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 150: 0 (9.0/1.0)
+|   |   |   |   |   |   |   Age > 71
+|   |   |   |   |   |   |   |   CRP Level <= 2.973614: 0 (6.0)
+|   |   |   |   |   |   |   |   CRP Level > 2.973614
+|   |   |   |   |   |   |   |   |   Triglyceride Level <= 117: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Triglyceride Level > 117
+|   |   |   |   |   |   |   |   |   |   Blood Pressure <= 171: 1 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Blood Pressure > 171: 0 (2.0)
+|   |   |   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   |   |   Blood Pressure <= 172: 0 (50.0/3.0)
+|   |   |   |   |   |   |   Blood Pressure > 172
+|   |   |   |   |   |   |   |   Alcohol Consumption=Low <= 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   Alcohol Consumption=Low > 0: 0 (3.0)
+|   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   Alcohol Consumption=Low <= 0
+|   |   |   |   |   |   Exercise Habits=Low <= 0: 0 (196.0/29.0)
+|   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   Age <= 64
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 8.737695
+|   |   |   |   |   |   |   |   |   |   Gender=Female <= 0: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 117: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 117
+|   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No <= 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 8.737695: 1 (4.0)
+|   |   |   |   |   |   |   |   Age > 64: 0 (19.0/1.0)
+|   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   Cholesterol Level <= 237
+|   |   |   |   |   |   |   |   |   Cholesterol Level <= 221
+|   |   |   |   |   |   |   |   |   |   BMI <= 19.757139: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 19.757139: 0 (17.0/1.0)
+|   |   |   |   |   |   |   |   |   Cholesterol Level > 221: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   Cholesterol Level > 237: 0 (21.0)
+|   |   |   |   |   Alcohol Consumption=Low > 0
+|   |   |   |   |   |   Blood Pressure <= 133
+|   |   |   |   |   |   |   Homocysteine Level <= 12.189878
+|   |   |   |   |   |   |   |   Sleep Hours <= 8.22265: 1 (12.0/1.0)
+|   |   |   |   |   |   |   |   Sleep Hours > 8.22265: 0 (3.0)
+|   |   |   |   |   |   |   Homocysteine Level > 12.189878: 0 (10.0/1.0)
+|   |   |   |   |   |   Blood Pressure > 133
+|   |   |   |   |   |   |   Fasting Blood Sugar <= 93
+|   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0: 1 (5.0)
+|   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (2.0)
+|   |   |   |   |   |   |   Fasting Blood Sugar > 93: 0 (83.0/9.0)
+|   |   |   Sugar Consumption=Low > 0
+|   |   |   |   Gender=Female <= 0
+|   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   CRP Level <= 7.83308: 0 (58.0/2.0)
+|   |   |   |   |   |   CRP Level > 7.83308
+|   |   |   |   |   |   |   Sleep Hours <= 6.195336
+|   |   |   |   |   |   |   |   Age <= 65
+|   |   |   |   |   |   |   |   |   Age <= 25: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   Age > 25: 1 (9.0)
+|   |   |   |   |   |   |   |   Age > 65
+|   |   |   |   |   |   |   |   |   Smoking=No <= 0
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 196: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 196: 0 (2.0)
+|   |   |   |   |   |   |   |   |   Smoking=No > 0: 0 (7.0)
+|   |   |   |   |   |   |   Sleep Hours > 6.195336
+|   |   |   |   |   |   |   |   CRP Level <= 9.618928
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 131: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 131
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level <= 160: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   Triglyceride Level > 160: 0 (4.0)
+|   |   |   |   |   |   |   |   CRP Level > 9.618928: 0 (33.0/1.0)
+|   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   Blood Pressure <= 176: 0 (95.0/7.0)
+|   |   |   |   |   |   Blood Pressure > 176
+|   |   |   |   |   |   |   Cholesterol Level <= 256: 0 (5.0/1.0)
+|   |   |   |   |   |   |   Cholesterol Level > 256: 1 (3.0)
+|   |   |   |   Gender=Female > 0
+|   |   |   |   |   CRP Level <= 2.458669
+|   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 0 (16.0/4.0)
+|   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   |   |   Sleep Hours <= 8.317948
+|   |   |   |   |   |   |   |   |   Age <= 41: 1 (3.0)
+|   |   |   |   |   |   |   |   |   Age > 41: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   Sleep Hours > 8.317948: 1 (5.0)
+|   |   |   |   |   |   |   Exercise Habits=Low > 0: 1 (2.0)
+|   |   |   |   |   CRP Level > 2.458669: 0 (163.0/25.0)
+|   Alcohol Consumption=High > 0
+|   |   Smoking=No <= 0
+|   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   Cholesterol Level <= 183: 0 (78.0/8.0)
+|   |   |   |   Cholesterol Level > 183
+|   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   Blood Pressure <= 132
+|   |   |   |   |   |   |   |   Sugar Consumption=Low <= 0
+|   |   |   |   |   |   |   |   |   Age <= 47
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 5.60086: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 5.60086: 1 (5.0)
+|   |   |   |   |   |   |   |   |   Age > 47: 0 (4.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Low > 0: 1 (4.0)
+|   |   |   |   |   |   |   Blood Pressure > 132: 0 (46.0/8.0)
+|   |   |   |   |   |   Gender=Female > 0: 0 (48.0/8.0)
+|   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   Age <= 21: 0 (12.0)
+|   |   |   |   |   |   Age > 21
+|   |   |   |   |   |   |   Homocysteine Level <= 8.860724
+|   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   Sleep Hours <= 6.819765: 0 (14.0)
+|   |   |   |   |   |   |   |   |   Sleep Hours > 6.819765
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 87: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 87
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 128: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 128: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 1 (3.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=High > 0: 0 (12.0)
+|   |   |   |   |   |   |   Homocysteine Level > 8.860724
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 290: 0 (23.0/3.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 290: 1 (2.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   Sleep Hours <= 8.510574
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 13.55021: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 13.55021: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   Sleep Hours > 8.510574: 1 (6.0)
+|   |   |   |   |   |   |   |   Low HDL Cholesterol=No > 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 145
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 12.497204: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 12.497204: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0
+|   |   |   |   |   |   |   |   |   |   |   Gender=Female <= 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 135: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 135: 0 (2.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 145
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Age <= 78: 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Age > 78: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=High > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0: 1 (8.0)
+|   |   |   Exercise Habits=Medium > 0
+|   |   |   |   Blood Pressure <= 125: 0 (14.0)
+|   |   |   |   Blood Pressure > 125
+|   |   |   |   |   Fasting Blood Sugar <= 94: 0 (21.0/1.0)
+|   |   |   |   |   Fasting Blood Sugar > 94
+|   |   |   |   |   |   Homocysteine Level <= 10.386159
+|   |   |   |   |   |   |   Low HDL Cholesterol=No <= 0
+|   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   Gender=Female <= 0: 0 (10.0)
+|   |   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 204: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Cholesterol Level > 204: 0 (3.0)
+|   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   Low HDL Cholesterol=No > 0: 0 (24.0/2.0)
+|   |   |   |   |   |   Homocysteine Level > 10.386159
+|   |   |   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   BMI <= 24.993516: 0 (9.0)
+|   |   |   |   |   |   |   |   |   BMI > 24.993516
+|   |   |   |   |   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 14.19794: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Homocysteine Level > 14.19794: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   Gender=Female > 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0
+|   |   |   |   |   |   |   |   |   Fasting Blood Sugar <= 124: 1 (7.0)
+|   |   |   |   |   |   |   |   |   Fasting Blood Sugar > 124
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No <= 0
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure <= 150: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Blood Pressure > 150: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Sugar Consumption=Medium > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   High Blood Pressure=No > 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   |   |   Diabetes=Yes <= 0
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 139: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 139
+|   |   |   |   |   |   |   |   |   |   Gender=Female <= 0: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level <= 207: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   Cholesterol Level > 207: 0 (2.0)
+|   |   |   |   |   |   |   |   Diabetes=Yes > 0: 1 (6.0)
+|   |   Smoking=No > 0
+|   |   |   Diabetes=Yes <= 0
+|   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   Exercise Habits=Low <= 0
+|   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   Homocysteine Level <= 16.666785
+|   |   |   |   |   |   |   |   Age <= 65: 0 (27.0/5.0)
+|   |   |   |   |   |   |   |   Age > 65: 1 (5.0/1.0)
+|   |   |   |   |   |   |   Homocysteine Level > 16.666785: 1 (7.0/1.0)
+|   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   |   Fasting Blood Sugar <= 127
+|   |   |   |   |   |   |   |   |   Cholesterol Level <= 220: 0 (6.0)
+|   |   |   |   |   |   |   |   |   Cholesterol Level > 220: 1 (5.0/2.0)
+|   |   |   |   |   |   |   |   Fasting Blood Sugar > 127: 1 (8.0/2.0)
+|   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   Triglyceride Level <= 239: 0 (9.0)
+|   |   |   |   |   |   |   |   |   Triglyceride Level > 239
+|   |   |   |   |   |   |   |   |   |   CRP Level <= 11.71551: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   CRP Level > 11.71551: 0 (2.0)
+|   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (13.0)
+|   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   Sleep Hours <= 9.524991: 0 (39.0/5.0)
+|   |   |   |   |   |   Sleep Hours > 9.524991: 1 (3.0)
+|   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   Exercise Habits=Medium <= 0
+|   |   |   |   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   |   |   |   Homocysteine Level <= 10.23228: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   Homocysteine Level > 10.23228: 0 (7.0)
+|   |   |   |   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   |   |   |   Blood Pressure <= 137: 1 (3.0)
+|   |   |   |   |   |   |   |   Blood Pressure > 137
+|   |   |   |   |   |   |   |   |   Blood Pressure <= 174: 0 (5.0)
+|   |   |   |   |   |   |   |   |   Blood Pressure > 174: 1 (2.0)
+|   |   |   |   |   |   Exercise Habits=Medium > 0
+|   |   |   |   |   |   |   Blood Pressure <= 160: 0 (9.0)
+|   |   |   |   |   |   |   Blood Pressure > 160: 1 (3.0/1.0)
+|   |   |   |   |   Family Heart Disease=No > 0: 0 (41.0/5.0)
+|   |   |   Diabetes=Yes > 0
+|   |   |   |   High LDL Cholesterol=Yes <= 0
+|   |   |   |   |   Sugar Consumption=High <= 0
+|   |   |   |   |   |   Homocysteine Level <= 17.666971
+|   |   |   |   |   |   |   Gender=Female <= 0
+|   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 11.140952: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level > 11.140952: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   Exercise Habits=High > 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Age <= 45: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Age > 45: 0 (3.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0: 1 (4.0)
+|   |   |   |   |   |   |   Gender=Female > 0
+|   |   |   |   |   |   |   |   Exercise Habits=High <= 0
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No <= 0
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level <= 11.839883: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   Homocysteine Level > 11.839883: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Family Heart Disease=No > 0
+|   |   |   |   |   |   |   |   |   |   BMI <= 29.495723: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   BMI > 29.495723: 1 (4.0)
+|   |   |   |   |   |   |   |   Exercise Habits=High > 0: 0 (12.0/1.0)
+|   |   |   |   |   |   Homocysteine Level > 17.666971: 0 (15.0)
+|   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   Exercise Habits=Low <= 0: 0 (17.0)
+|   |   |   |   |   |   Exercise Habits=Low > 0
+|   |   |   |   |   |   |   Fasting Blood Sugar <= 141: 0 (7.0/1.0)
+|   |   |   |   |   |   |   Fasting Blood Sugar > 141: 1 (2.0)
+|   |   |   |   High LDL Cholesterol=Yes > 0
+|   |   |   |   |   Sugar Consumption=High <= 0: 0 (60.0/3.0)
+|   |   |   |   |   Sugar Consumption=High > 0
+|   |   |   |   |   |   Fasting Blood Sugar <= 89: 1 (4.0)
+|   |   |   |   |   |   Fasting Blood Sugar > 89: 0 (32.0/4.0)
+
+Number of Leaves  : 	756
+
+Size of the tree : 	1511
+
+
+=== Evaluation on Training Data ===
+
+Correctly Classified Instances        9055               90.55   %
+Incorrectly Classified Instances       945                9.45   %
+Kappa statistic                          0.6557
+Mean absolute error                      0.1612
+Root mean squared error                  0.2839
+Relative absolute error                 50.3604 %
+Root relative squared error             70.9691 %
+Total Number of Instances            10000     
+
+Confusion Matrix:
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 7907   93 |    a = 0
+  852 1148 |    b = 1
+
+
+=== Performance Metrics ===
+Accuracy: 90.55%
+Error Rate: 9.45%
+Kappa Statistic: 0.6557
+Mean Absolute Error: 0.1612
+Root Mean Squared Error: 0.2839
+
+Class-specific Metrics:
+
+Class: 0
+  Precision: 0.9027
+  Recall: 0.9884
+  F-Measure: 0.9436
+  ROC Area: 0.8687
+
+Class: 1
+  Precision: 0.9251
+  Recall: 0.5740
+  F-Measure: 0.7084
+  ROC Area: 0.8687
+
+=== STEP 2 COMPLETED SUCCESSFULLY ===
