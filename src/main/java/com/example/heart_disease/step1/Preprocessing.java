@@ -1,4 +1,4 @@
-package com.example.heart_disease;
+package com.example.heart_disease.step1;
 
 import weka.core.Instances;
 

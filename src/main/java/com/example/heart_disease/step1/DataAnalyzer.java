@@ -1,12 +1,12 @@
 // src/main/java/com/example/heart_disease/DataAnalyzer.java
-package com.example.heart_disease;
+package com.example.heart_disease.step1;
 
 import weka.core.Instances;
 import weka.core.AttributeStats;
 import weka.core.Attribute;
 
 public class DataAnalyzer {
-
+  
     /**
        Data analysis
      */
