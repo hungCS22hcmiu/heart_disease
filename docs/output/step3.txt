@@ -1,0 +1,56 @@
+=== STEP 3: CLASSIFICATION (Balanced Random Forest) ===
+
+✓ Dataset loaded
+✓ Class attribute converted to nominal
+
+=== Balancing Dataset (Resampling) ===
+✓ Data Balanced!
+  - Original Instances: 10000
+  - Balanced Instances: 10000
+
+=== Building Random Forest on Balanced Data ===
+✓ Model built successfully!
+✓ Build time: 2876 ms
+
+=== Evaluation (10-Fold Cross-Validation on Balanced Data) ===
+
+Correctly Classified Instances        9367               93.67   %
+Incorrectly Classified Instances       633                6.33   %
+Kappa statistic                          0.8734
+Mean absolute error                      0.2099
+Root mean squared error                  0.2746
+Relative absolute error                 41.979  %
+Root relative squared error             54.9125 %
+Total Number of Instances            10000     
+
+Confusion Matrix:
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4850  150 |    a = 0
+  483 4517 |    b = 1
+
+
+=== Performance Metrics ===
+Accuracy: 93.67%
+Error Rate: 6.33%
+Kappa Statistic: 0.8734
+Mean Absolute Error: 0.2099
+Root Mean Squared Error: 0.2746
+
+
+Class-specific Metrics:
+
+Class: 0
+  Precision: 0.9094
+  Recall: 0.9700
+  F-Measure: 0.9387
+  ROC Area: 0.9706
+
+Class: 1
+  Precision: 0.9679
+  Recall: 0.9034
+  F-Measure: 0.9345
+  ROC Area: 0.9706
+
+=== STEP 3 COMPLETED SUCCESSFULLY ===
