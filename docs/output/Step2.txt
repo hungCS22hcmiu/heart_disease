@@ -13,7 +13,7 @@ Class attribute type: 0
 
 === Building J48 Decision Tree Classifier ===
 ✓ Classifier built successfully!
-✓ Build time: 1478 ms
+✓ Build time: 490 ms
 
 === Decision Tree Model ===
 J48 pruned tree
