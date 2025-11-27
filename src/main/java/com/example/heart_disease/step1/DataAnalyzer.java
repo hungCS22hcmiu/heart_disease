@@ -49,10 +49,11 @@ public class DataAnalyzer {
     }
 
     private void printNumericStats(Instances data, int attrIndex, AttributeStats stats) {
-        double min = data.kthSmallestValue(attrIndex, 1);
-        double max = data.kthSmallestValue(attrIndex, data.numInstances());
-        double mean = data.meanOrMode(attrIndex);
-        double stdDev = Math.sqrt(data.variance(attrIndex));
+
+        double min = stats.numericStats.min;
+        double max = stats.numericStats.max;
+        double mean = stats.numericStats.mean;
+        double stdDev = stats.numericStats.stdDev;
 
         System.out.println("   Min: " + String.format("%.2f", min) +
                 ", Max: " + String.format("%.2f", max) +
