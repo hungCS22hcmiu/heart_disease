@@ -150,6 +150,8 @@ Total missing values: 500
 Dataset completeness: 99.76%
 Recommended: Consider feature selection based on variance analysis
 ✓ Class attribute set to: Heart Disease Status=Yes
+
+------------------------------------------------------------------------------------------------
 --- CLEANED DATA ANALYSIS ---
  COMPREHENSIVE DATA ANALYSIS
 
@@ -290,4 +292,4 @@ Total missing values: 0
 Dataset completeness: 100.00%
 Recommended: Consider feature selection based on variance analysis
 
- STEP 1 COMPLETED.Final outputs:  - /Users/blake/IdeaProjects/heart_disease/src/main/resources/heart_disease_cleaned.csv (For general use)  - /Users/blake/IdeaProjects/heart_disease/src/main/resources/heart_disease_cleaned.arff (For WEKA use)
+ STEP 1 COMPLETED.Final outputs:  - /Users/hung/Desktop/Sem1/Data Mining/Project/heart_disease/src/main/resources/heart_disease_cleaned.csv (For general use)  - /Users/hung/Desktop/Sem1/Data Mining/Project/heart_disease/src/main/resources/heart_disease_cleaned.arff (For WEKA use)

@@ -10,7 +10,7 @@
 
 === Building Random Forest on Balanced Data ===
 ✓ Model built successfully!
-✓ Build time: 3614 ms
+✓ Build time: 4992 ms
 
 === Evaluation on Training Data ===
 

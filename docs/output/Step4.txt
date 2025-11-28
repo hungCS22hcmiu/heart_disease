@@ -7,7 +7,7 @@
 
 === Evaluating J48 Decision Tree ===
 ✓ J48 model built and evaluated
-✓ Build time: 418 ms
+✓ Build time: 617 ms
 
 --- J48 Cross-Validation Results ---
 
@@ -53,7 +53,7 @@ Class: 1
 === Evaluating Random Forest (Balanced) ===
 ✓ Data balanced: 10000 -> 10000 instances
 ✓ Random Forest model built and evaluated
-✓ Build time: 3350 ms
+✓ Build time: 4315 ms
 
 --- Random Forest Cross-Validation Results ---
 
@@ -106,13 +106,13 @@ Error Rate (%)                 27.98           6.41
 Kappa Statistic                -0.0039         0.8718         
 Mean Absolute Error            0.3250          0.2101         
 RMSE                           0.4959          0.2747         
-Build Time (ms)                418             3350           
+Build Time (ms)                617             4315           
 
 === WINNER ANALYSIS ===
 
 Best Accuracy: Random Forest (93.59%)
 Best Kappa: Random Forest (0.8718)
-Faster Build: J48 (418 ms)
+Faster Build: J48 (617 ms)
 
 
 === STEP 4 COMPLETED SUCCESSFULLY ===
