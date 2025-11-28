@@ -10,47 +10,47 @@
 
 === Building Random Forest on Balanced Data ===
 ✓ Model built successfully!
-✓ Build time: 2876 ms
+✓ Build time: 4992 ms
 
-=== Evaluation (10-Fold Cross-Validation on Balanced Data) ===
+=== Evaluation on Training Data ===
 
-Correctly Classified Instances        9367               93.67   %
-Incorrectly Classified Instances       633                6.33   %
-Kappa statistic                          0.8734
-Mean absolute error                      0.2099
-Root mean squared error                  0.2746
-Relative absolute error                 41.979  %
-Root relative squared error             54.9125 %
+Correctly Classified Instances       10000              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0698
+Root mean squared error                  0.0961
+Relative absolute error                 13.9596 %
+Root relative squared error             19.228  %
 Total Number of Instances            10000     
 
 Confusion Matrix:
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 4850  150 |    a = 0
-  483 4517 |    b = 1
+ 5000    0 |    a = 0
+    0 5000 |    b = 1
 
 
 === Performance Metrics ===
-Accuracy: 93.67%
-Error Rate: 6.33%
-Kappa Statistic: 0.8734
-Mean Absolute Error: 0.2099
-Root Mean Squared Error: 0.2746
+Accuracy: 100.00%
+Error Rate: 0.00%
+Kappa Statistic: 1.0000
+Mean Absolute Error: 0.0698
+Root Mean Squared Error: 0.0961
 
 
 Class-specific Metrics:
 
 Class: 0
-  Precision: 0.9094
-  Recall: 0.9700
-  F-Measure: 0.9387
-  ROC Area: 0.9706
+  Precision: 1.0000
+  Recall: 1.0000
+  F-Measure: 1.0000
+  ROC Area: 1.0000
 
 Class: 1
-  Precision: 0.9679
-  Recall: 0.9034
-  F-Measure: 0.9345
-  ROC Area: 0.9706
+  Precision: 1.0000
+  Recall: 1.0000
+  F-Measure: 1.0000
+  ROC Area: 1.0000
 
 === STEP 3 COMPLETED SUCCESSFULLY ===
