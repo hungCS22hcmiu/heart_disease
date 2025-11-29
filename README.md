@@ -7,33 +7,44 @@ This is a complete data mining framework for heart disease prediction using mach
 ```
 heart_disease/
 ├── src/main/java/com/example/heart_disease/
-│   ├── Main.java                    # Main entry point
-│   ├── common/                      # Shared utilities
-│   │   └── DataProcessor.java
-│   ├── step1/                       # Data preprocessing
-│   │   ├── Preprocessing.java
-│   │   ├── DataLoader.java
+│   ├── classification/              # Classification algorithms
+│   │   ├── ClassifierBase.java      # Base class for classifiers
+│   │   ├── crossvalidation/
+│   │   │   └── CrossValidation.java
+│   │   ├── evaluation/
+│   │   │   ├── ModelEvaluator.java
+│   │   │   └── ResultsParser.java
+│   │   ├── j48/
+│   │   │   └── J48Classifier.java
+│   │   └── randomforest/
+│   │       └── RandomForestClassifier.java
+│   ├── preprocessing/               # Data preprocessing
+│   │   ├── DataAnalyzer.java
 │   │   ├── DataCleaner.java
-│   │   └── DataAnalyzer.java
-│   ├── step2/                       # J48 Classification
-│   │   ├── Step2Classification.java
-│   │   └── J48Algorithm.java
-│   ├── step3/                       # Random Forest Classification
-│   │   ├── Step3Classification.java
-│   │   └── RandomForestAlgorithm.java
-│   └── step4/                       # Model Evaluation
-│       ├── Step4Evaluation.java
-│       ├── CrossValidation.java
-│       ├── PerformanceMetrics.java
-│       └── ModelComparator.java
+│   │   └── DataLoader.java
+│   ├── runner/                      # Main execution classes
+│   │   ├── EvaluationRunner.java
+│   │   ├── J48Runner.java
+│   │   ├── PreprocessingRunner.java
+│   │   ├── RandomForestRunner.java
+│   │   └── TotalRunner.java
+│   └── utils/                       # Utility classes
+│       ├── FileUtils.java
+│       └── Logger.java
 ├── src/main/resources/              # Data files
-│   └── heart_disease.csv
-├── docs/output/                     # Output reports
-│   ├── Step1.txt
-│   ├── Step2.txt
-│   ├── Step3.txt
-│   └── Step4.txt
-└── pom.xml
+│   ├── heart_disease.csv
+│   ├── heart_disease_cleaned.csv
+│   └── heart_disease_cleaned.arff
+├── docs/                            # Documentation
+│   ├── Project Assignment.2025.2.pdf
+│   └── output/                      # Output reports
+│       ├── Step1.txt
+│       ├── Step2.txt
+│       ├── Step3.txt
+│       └── Step4.txt
+├── DECISIONTREE.model               # Saved J48 model
+├── RANDOMFOREST.model               # Saved Random Forest model
+└── pom.xml                          # Maven configuration
 ```
 
 ## Building the Project
@@ -56,39 +67,39 @@ This will compile the code and create a JAR file in the `target` directory.
 
 Run with the default dataset (src/main/resources/heart_disease.csv):
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.Main"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.TotalRunner"
 ```
 
 Run with a custom dataset (absolute or relative path):
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.Main" -Dexec.args="<path_to_your_dataset.csv>"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.TotalRunner" -Dexec.args="<path_to_your_dataset.csv>"
 ```
 
 Example:
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.Main" -Dexec.args="/path/to/your/dataset.csv"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.Main" -Dexec.args="/path/to/your/dataset.csv"
 ```
 
 ### Option 2: Run individual steps
 
 **Step 1: Data Preprocessing**
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.step1.Preprocessing"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.PreprocessingRunner"
 ```
 
 **Step 2: J48 Classification**
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.step2.Step2Classification"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.J48Runner"
 ```
 
 **Step 3: Random Forest Classification**
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.step3.Step3Classification"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.RandomForestRunner"
 ```
 
 **Step 4: Model Evaluation and Comparison**
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.heart_disease.step4.Step4Evaluation"
+mvn exec:java -Dexec.mainClass="com.example.heart_disease.runner.EvaluationRunner"
 ```
 
 ## Output Files
