@@ -1,56 +1,84 @@
-=== STEP 3: CLASSIFICATION (Balanced Random Forest) ===
+=== STEP 3: CLASSIFICATION (Random Forest with Balancing) ===
 
 ✓ Dataset loaded
+Class attribute: Heart Disease Status=Yes
+Class attribute type: 0
+
+=== Converting Class Attribute to Nominal ===
 ✓ Class attribute converted to nominal
+
 
 === Balancing Dataset (Resampling) ===
 ✓ Data Balanced!
   - Original Instances: 10000
   - Balanced Instances: 10000
 
-=== Building Random Forest on Balanced Data ===
+=== Building Random Forest ===
 ✓ Model built successfully!
-✓ Build time: 4992 ms
+✓ Build time: 5448 ms
 
-=== Evaluation on Training Data ===
+=== 10-Fold Cross-Validation ===
+✓ 10-fold cross-validation completed!
+✓ Cross-validation time: 47799 ms
 
-Correctly Classified Instances       10000              100      %
-Incorrectly Classified Instances         0                0      %
-Kappa statistic                          1     
-Mean absolute error                      0.0698
-Root mean squared error                  0.0961
-Relative absolute error                 13.9596 %
-Root relative squared error             19.228  %
+
+Correctly Classified Instances        9359               93.59   %
+Incorrectly Classified Instances       641                6.41   %
+Kappa statistic                          0.8718
+Mean absolute error                      0.2101
+Root mean squared error                  0.2747
+Relative absolute error                 42.0154 %
+Root relative squared error             54.9325 %
 Total Number of Instances            10000     
 
 Confusion Matrix:
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 5000    0 |    a = 0
-    0 5000 |    b = 1
+ 4841  159 |    a = 0
+  482 4518 |    b = 1
+
+
+
+Correctly Classified Instances        9359               93.59   %
+Incorrectly Classified Instances       641                6.41   %
+Kappa statistic                          0.8718
+Mean absolute error                      0.2101
+Root mean squared error                  0.2747
+Relative absolute error                 42.0154 %
+Root relative squared error             54.9325 %
+Total Number of Instances            10000     
+
+Confusion Matrix:
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4841  159 |    a = 0
+  482 4518 |    b = 1
 
 
 === Performance Metrics ===
-Accuracy: 100.00%
-Error Rate: 0.00%
-Kappa Statistic: 1.0000
-Mean Absolute Error: 0.0698
-Root Mean Squared Error: 0.0961
-
+Accuracy: 93.59%
+Error Rate: 6.41%
+Kappa Statistic: 0.8718
+Mean Absolute Error: 0.2101
+Root Mean Squared Error: 0.2747
 
 Class-specific Metrics:
 
 Class: 0
-  Precision: 1.0000
-  Recall: 1.0000
-  F-Measure: 1.0000
-  ROC Area: 1.0000
+  Precision: 0.9094
+  Recall: 0.9682
+  F-Measure: 0.9379
+  ROC Area: 0.9705
 
 Class: 1
-  Precision: 1.0000
-  Recall: 1.0000
-  F-Measure: 1.0000
-  ROC Area: 1.0000
+  Precision: 0.9660
+  Recall: 0.9036
+  F-Measure: 0.9338
+  ROC Area: 0.9705
+
+✓ Model saved to: RANDOMFOREST.model
+
 
 === STEP 3 COMPLETED SUCCESSFULLY ===
