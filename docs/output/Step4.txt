@@ -1,118 +1,48 @@
 === STEP 4: MODEL EVALUATION AND COMPARISON ===
 
-✓ Dataset loaded and prepared
-✓ Number of instances: 10000
-✓ Number of attributes: 30
-✓ Class attribute: Heart Disease Status=Yes
+✓ Step2.txt already exists. Skipping Step 2 execution.
 
-=== Evaluating J48 Decision Tree ===
-✓ J48 model built and evaluated
-✓ Build time: 617 ms
+✓ Step3.txt already exists. Skipping Step 3 execution.
 
---- J48 Cross-Validation Results ---
+=== Verifying Trained Models ===
+✓ J48 Decision Tree model loaded from DECISIONTREE.model
+✓ Random Forest model loaded from RANDOMFOREST.model
 
-Correctly Classified Instances        7202               72.02   %
-Incorrectly Classified Instances      2798               27.98   %
-Kappa statistic                         -0.0039
-Mean absolute error                      0.325 
-Root mean squared error                  0.4959
-Relative absolute error                101.5411 %
-Root relative squared error            123.9831 %
-Total Number of Instances            10000     
-
-Confusion Matrix:
-=== Confusion Matrix ===
-
-    a    b   <-- classified as
- 6945 1055 |    a = 0
- 1743  257 |    b = 1
+=== Parsing Evaluation Results ===
+✓ J48 metrics parsed from Step2.txt
+✓ Random Forest metrics parsed from Step3.txt
 
 
-=== Performance Metrics for J48 ===
-Accuracy: 72.02%
-Error Rate: 27.98%
-Kappa Statistic: -0.0039
-Mean Absolute Error: 0.3250
-Root Mean Squared Error: 0.4959
+=== PERFORMANCE COMPARISON ===
+Metric                    | J48             | Random Forest  
+-------------------------------------------------------------------
+Accuracy (%)              | 72.02           | 93.59          
+Kappa Statistic           | -0.0039         | 0.8718         
+Mean Absolute Error       | 0.3250          | 0.2101         
+Root Mean Squared Error   | 0.4959          | 0.2747         
+CV Time (ms)              | 6149            | 55543          
 
-Class-specific Metrics:
+=== Class-specific Comparison ===
 
 Class: 0
-  Precision: 0.7994
-  Recall: 0.8681
-  F-Measure: 0.8323
-  ROC Area: 0.4959
+  Precision            | J48: 0.7994 | RF: 0.9094
+  Recall               | J48: 0.8681 | RF: 0.9682
+  F-Measure            | J48: 0.8323 | RF: 0.9379
+  ROC Area             | J48: 0.4959 | RF: 0.9705
 
 Class: 1
-  Precision: 0.1959
-  Recall: 0.1285
-  F-Measure: 0.1552
-  ROC Area: 0.4959
+  Precision            | J48: 0.1959 | RF: 0.9660
+  Recall               | J48: 0.1285 | RF: 0.9036
+  F-Measure            | J48: 0.1552 | RF: 0.9338
+  ROC Area             | J48: 0.4959 | RF: 0.9705
 
+=== CONCLUSION ===
+Better performing model: Random Forest
+Accuracy improvement: 21.57%
 
-=== Evaluating Random Forest (Balanced) ===
-✓ Data balanced: 10000 -> 10000 instances
-✓ Random Forest model built and evaluated
-✓ Build time: 4315 ms
-
---- Random Forest Cross-Validation Results ---
-
-Correctly Classified Instances        9359               93.59   %
-Incorrectly Classified Instances       641                6.41   %
-Kappa statistic                          0.8718
-Mean absolute error                      0.2101
-Root mean squared error                  0.2747
-Relative absolute error                 42.0154 %
-Root relative squared error             54.9325 %
-Total Number of Instances            10000     
-
-Confusion Matrix:
-=== Confusion Matrix ===
-
-    a    b   <-- classified as
- 4841  159 |    a = 0
-  482 4518 |    b = 1
-
-
-=== Performance Metrics for Random Forest ===
-Accuracy: 93.59%
-Error Rate: 6.41%
-Kappa Statistic: 0.8718
-Mean Absolute Error: 0.2101
-Root Mean Squared Error: 0.2747
-
-Class-specific Metrics:
-
-Class: 0
-  Precision: 0.9094
-  Recall: 0.9682
-  F-Measure: 0.9379
-  ROC Area: 0.9705
-
-Class: 1
-  Precision: 0.9660
-  Recall: 0.9036
-  F-Measure: 0.9338
-  ROC Area: 0.9705
-
-
-
-=== MODEL COMPARISON ===
-
-Metric                         J48             Random Forest  
-============================================================
-Accuracy (%)                   72.02           93.59          
-Error Rate (%)                 27.98           6.41           
-Kappa Statistic                -0.0039         0.8718         
-Mean Absolute Error            0.3250          0.2101         
-RMSE                           0.4959          0.2747         
-Build Time (ms)                617             4315           
-
-=== WINNER ANALYSIS ===
-
-Best Accuracy: Random Forest (93.59%)
-Best Kappa: Random Forest (0.8718)
-Faster Build: J48 (617 ms)
-
+=== NOTES ===
+Detailed evaluation results are available in:
+  - docs/output/Step2.txt (J48 Decision Tree)
+  - docs/output/Step3.txt (Random Forest)
 
 === STEP 4 COMPLETED SUCCESSFULLY ===
