@@ -1,6 +1,6 @@
 === STEP 2: CLASSIFICATION ALGORITHM (J48 Decision Tree) ===
 
-✓ Dataset loaded: /Users/hung/Desktop/Sem1/Data Mining/Project/heart_disease/src/main/resources/heart_disease_cleaned.arff
+✓ Dataset loaded: src/main/resources/heart_disease_cleaned.arff
 ✓ Number of instances: 10000
 ✓ Number of attributes: 30
 
@@ -8,12 +8,13 @@ Class attribute: Heart Disease Status=Yes
 Class attribute type: 0
 
 === Converting Class Attribute to Nominal ===
+Class attribute: Heart Disease Status=Yes
 ✓ Class attribute converted to nominal
 ✓ Class values: @attribute 'Heart Disease Status=Yes' {0,1}
 
-=== Building J48 Decision Tree Classifier ===
-✓ Classifier built successfully!
-✓ Build time: 1114 ms
+=== Building J48 Decision Tree ===
+✓ Model built successfully!
+✓ Build time: 3284 ms
 
 === Decision Tree Model ===
 J48 pruned tree
@@ -1535,44 +1536,69 @@ Number of Leaves  : 	756
 Size of the tree : 	1511
 
 
-=== Evaluation on Training Data ===
+✓ Model saved to: DECISIONTREE.model
+✓ Model file size: 279503 bytes
 
-Correctly Classified Instances        9055               90.55   %
-Incorrectly Classified Instances       945                9.45   %
-Kappa statistic                          0.6557
-Mean absolute error                      0.1612
-Root mean squared error                  0.2839
-Relative absolute error                 50.3604 %
-Root relative squared error             70.9691 %
+=== 10-Fold Cross-Validation ===
+✓ 10-fold cross-validation completed!
+✓ Cross-validation time: 6149 ms
+
+
+Correctly Classified Instances        7202               72.02   %
+Incorrectly Classified Instances      2798               27.98   %
+Kappa statistic                         -0.0039
+Mean absolute error                      0.325 
+Root mean squared error                  0.4959
+Relative absolute error                101.5411 %
+Root relative squared error            123.9831 %
 Total Number of Instances            10000     
 
 Confusion Matrix:
 === Confusion Matrix ===
 
     a    b   <-- classified as
- 7907   93 |    a = 0
-  852 1148 |    b = 1
+ 6945 1055 |    a = 0
+ 1743  257 |    b = 1
+
+
+
+Correctly Classified Instances        7202               72.02   %
+Incorrectly Classified Instances      2798               27.98   %
+Kappa statistic                         -0.0039
+Mean absolute error                      0.325 
+Root mean squared error                  0.4959
+Relative absolute error                101.5411 %
+Root relative squared error            123.9831 %
+Total Number of Instances            10000     
+
+Confusion Matrix:
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 6945 1055 |    a = 0
+ 1743  257 |    b = 1
 
 
 === Performance Metrics ===
-Accuracy: 90.55%
-Error Rate: 9.45%
-Kappa Statistic: 0.6557
-Mean Absolute Error: 0.1612
-Root Mean Squared Error: 0.2839
+Accuracy: 72.02%
+Error Rate: 27.98%
+Kappa Statistic: -0.0039
+Mean Absolute Error: 0.3250
+Root Mean Squared Error: 0.4959
 
 Class-specific Metrics:
 
 Class: 0
-  Precision: 0.9027
-  Recall: 0.9884
-  F-Measure: 0.9436
-  ROC Area: 0.8687
+  Precision: 0.7994
+  Recall: 0.8681
+  F-Measure: 0.8323
+  ROC Area: 0.4959
 
 Class: 1
-  Precision: 0.9251
-  Recall: 0.5740
-  F-Measure: 0.7084
-  ROC Area: 0.8687
+  Precision: 0.1959
+  Recall: 0.1285
+  F-Measure: 0.1552
+  ROC Area: 0.4959
+
 
 === STEP 2 COMPLETED SUCCESSFULLY ===
