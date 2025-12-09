@@ -15,11 +15,11 @@ Class attribute type: 0
 
 === Building Random Forest ===
 ✓ Model built successfully!
-✓ Build time: 5448 ms
+✓ Build time: 10924 ms
 
 === 10-Fold Cross-Validation ===
 ✓ 10-fold cross-validation completed!
-✓ Cross-validation time: 47799 ms
+✓ Cross-validation time: 98449 ms
 
 
 Correctly Classified Instances        9359               93.59   %

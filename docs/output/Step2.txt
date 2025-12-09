@@ -14,7 +14,7 @@ Class attribute: Heart Disease Status=Yes
 
 === Building J48 Decision Tree ===
 ✓ Model built successfully!
-✓ Build time: 1459 ms
+✓ Build time: 2209 ms
 
 === Decision Tree Model ===
 J48 pruned tree
@@ -1541,7 +1541,7 @@ Size of the tree : 	1511
 
 === 10-Fold Cross-Validation ===
 ✓ 10-fold cross-validation completed!
-✓ Cross-validation time: 4961 ms
+✓ Cross-validation time: 10310 ms
 
 
 Correctly Classified Instances        7202               72.02   %
