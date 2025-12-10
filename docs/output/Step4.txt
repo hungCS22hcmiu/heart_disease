@@ -1,48 +1,159 @@
-=== STEP 4: MODEL EVALUATION AND COMPARISON ===
+=== STEP 4: COMPREHENSIVE MODEL EVALUATION AND COMPARISON ===
 
-✓ Step2.txt already exists. Skipping Step 2 execution.
+✓ Dataset loaded: src/main/resources/heart_disease_cleaned.arff
+✓ Total instances: 10000
+✓ Total attributes: 30
 
-✓ Step3.txt already exists. Skipping Step 3 execution.
+=== Data Preparation ===
+Class attribute: Heart Disease Status=Yes
+Class attribute type: 0
 
-=== Verifying Trained Models ===
-✓ J48 Decision Tree model loaded from DECISIONTREE.model
-✓ Random Forest model loaded from RANDOMFOREST.model
+=== Converting Class Attribute to Nominal ===
+✓ Data prepared (class converted to nominal)
 
-=== Parsing Evaluation Results ===
-✓ J48 metrics parsed from Step2.txt
-✓ Random Forest metrics parsed from Step3.txt
+=== Original Data Distribution ===
+Class 0 (No Heart Disease): 8000 (80.0%)
+Class 1 (Has Heart Disease): 2000 (20.0%)
+Ratio: 4.0:1
+
+=== Model Training & Evaluation ===
+
+---- MODEL 1: J48 Decision Tree (Imbalanced Data) ----
+=== Building J48 Decision Tree ===
+✓ Model built successfully!
+✓ Build time: 5812 ms
+
+Evaluating J48 (Imbalanced) with 10-fold cross-validation...
+✓ Evaluation completed in 17965 ms
+  Accuracy: 72.02%
+  Kappa: -0.0039
+  Class 1 Recall: 0.1285 (12.85%)
 
 
-=== PERFORMANCE COMPARISON ===
-Metric                    | J48             | Random Forest  
--------------------------------------------------------------------
-Accuracy (%)              | 72.02           | 93.59          
-Kappa Statistic           | -0.0039         | 0.8718         
-Mean Absolute Error       | 0.3250          | 0.2101         
-Root Mean Squared Error   | 0.4959          | 0.2747         
-CV Time (ms)              | 4961            | 47799          
+---- MODEL 2: J48 Decision Tree (Balanced Data) ----
 
-=== Class-specific Comparison ===
+=== Balancing Dataset (Resampling) ===
+✓ Data Balanced!
+  - Original Instances: 10000
+  - Balanced Instances: 10000
 
-Class: 0
-  Precision            | J48: 0.7994 | RF: 0.9094
-  Recall               | J48: 0.8681 | RF: 0.9682
-  F-Measure            | J48: 0.8323 | RF: 0.9379
-  ROC Area             | J48: 0.4959 | RF: 0.9705
+=== Class Distribution ===
+  - Class 0 (0): 5000 instances (50.00%)
+  - Class 1 (1): 5000 instances (50.00%)
 
-Class: 1
-  Precision            | J48: 0.1959 | RF: 0.9660
-  Recall               | J48: 0.1285 | RF: 0.9036
-  F-Measure            | J48: 0.1552 | RF: 0.9338
-  ROC Area             | J48: 0.4959 | RF: 0.9705
+=== Building J48 Decision Tree (Balanced) ===
+✓ Model built successfully!
+✓ Build time: 1523 ms
 
-=== CONCLUSION ===
-Better performing model: Random Forest
-Accuracy improvement: 21.57%
+Evaluating J48 (Balanced) with 10-fold cross-validation...
+✓ Evaluation completed in 12122 ms
+  Accuracy: 82.83%
+  Kappa: 0.6566
+  Class 1 Recall: 0.8800 (88.00%)
 
-=== NOTES ===
-Detailed evaluation results are available in:
-  - docs/output/Step2.txt (J48 Decision Tree)
-  - docs/output/Step3.txt (Random Forest)
 
-=== STEP 4 COMPLETED SUCCESSFULLY ===
+---- MODEL 3: Random Forest (Balanced Data) ----
+
+=== Balancing Dataset (Resampling) ===
+✓ Data Balanced!
+  - Original Instances: 10000
+  - Balanced Instances: 10000
+
+=== Building Random Forest ===
+✓ Model built successfully!
+✓ Build time: 9791 ms
+
+Evaluating Random Forest (Balanced) with 10-fold cross-validation...
+✓ Evaluation completed in 94688 ms
+  Accuracy: 93.59%
+  Kappa: 0.8718
+  Class 1 Recall: 0.9036 (90.36%)
+
+
+=== COMPARATIVE ANALYSIS ===
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ ACCURACY COMPARISON                                                 │
+├─────────────────────────────────────────────────────────────────────┤
+│ Model 1 (J48 Imbalanced):         72.02%                        │
+│ Model 2 (J48 Balanced):           82.83%                        │
+│ Model 3 (Random Forest):          93.59%                        │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│ CLASS 1 (DISEASE) RECALL COMPARISON - CRITICAL FOR MEDICAL USE            │
+├──────────────────────────────────────────────────────────────────────────┤
+│ Model 1 (J48 Imbalanced):         12.85%  ❌ POOR                 │
+│ Model 2 (J48 Balanced):           88.00%  ✅ ACCEPTABLE           │
+│ Model 3 (Random Forest):          90.36%  ✅ EXCELLENT            │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ KAPPA STATISTIC (Agreement Beyond Chance)                     │
+├──────────────────────────────────────────────────────────────┤
+│ Model 1 (J48 Imbalanced):        -0.0039  ❌ USELESS           │
+│ Model 2 (J48 Balanced):           0.6566  ✅ FAIR             │
+│ Model 3 (Random Forest):          0.8718  ✅ EXCELLENT        │
+└──────────────────────────────────────────────────────────────┘
+
+=== DETAILED METRICS COMPARISON TABLE ===
+
+Metric                           | J48 Imbalanced | J48 Balanced   | Random Forest
+─────────────────────────────────────────────────────────────────────────────────────
+Accuracy                         |          72.02 |          82.83 |          93.59
+Kappa Statistic                  |        -0.0039 |         0.6566 |         0.8718
+Mean Absolute Error              |         0.3250 |         0.1850 |         0.2101
+
+CLASS 0 (NO DISEASE) METRICS:
+  Precision (Class 0)            |         0.7994 |         0.8662 |         0.9094
+  Recall (Class 0)               |         0.8681 |         0.7766 |         0.9682
+  F-Measure (Class 0)            |         0.8323 |         0.8189 |         0.9379
+
+CLASS 1 (HAS DISEASE) METRICS:
+  Precision (Class 1)            |         0.1959 |         0.7975 |         0.9660
+  Recall (Class 1)               |         0.1285 |         0.8800 |         0.9036
+  F-Measure (Class 1)            |         0.1552 |         0.8367 |         0.9338
+  ROC Area (Class 1)             |         0.4959 |         0.8524 |         0.9705
+
+=== KEY INSIGHTS & ANALYSIS ===
+
+1. IMPACT OF DATA BALANCING (Model 1 vs Model 2):
+   • Accuracy improved by:       10.81%
+   • Class 1 Recall improved by: 75.15%
+   • Kappa improved by:          0.6605
+   → Data balancing significantly improves J48's ability to detect disease
+
+2. ALGORITHM DIFFERENCE (Model 2 vs Model 3):
+   • Accuracy difference:       10.76%
+   • Class 1 Recall difference: 2.36%
+   • Kappa difference:          0.2152
+   → Random Forest outperforms J48 even with balanced data
+
+3. MEDICAL PERSPECTIVE:
+   Expected missed diagnoses (out of 2000 sick patients):
+   • Model 1 (J48 Imbalanced):  ~1742 patients ❌
+   • Model 2 (J48 Balanced):    ~240 patients ⚠️
+   • Model 3 (Random Forest):   ~192 patients ✅
+
+=== FINAL RECOMMENDATION ===
+
+🏆 WINNER: Random Forest (Model 3)
+
+REASONS:
+1. Highest Overall Accuracy:      93.59%
+2. Excellent Disease Detection:   90.36% Recall
+3. Strong Reliability (Kappa):    0.8718
+4. Balanced Class Performance:    Both classes > 90% recall
+5. Medical Feasibility:           Only ~192 missed diagnoses
+
+RUNNER-UP: J48 with Balanced Data (Model 2)
+• Improvement over imbalanced:  Data balancing is critical!
+• Disease recall improved from 12.85% to 88.00%
+• Still inferior to Random Forest for medical applications
+
+NOT RECOMMENDED: J48 on Imbalanced Data (Model 1)
+• Misses 1742 out of 2000 sick patients
+• Negative Kappa: Worse than random guessing!
+• Dangerous for medical use
+
+=== STEP 4 EVALUATION COMPLETED ===
